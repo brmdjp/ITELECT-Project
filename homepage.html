@@ -3,13 +3,18 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
+    <title>WheelDrivePH</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
   </head>
   <style>
-    .cars {
+.navbar-brand{
+    margin-left: 25px;
+    color: white;
+}
+
+.cars {
   padding: 60px 20px;
-  background-color: #827d7d;
+  background-color: #f3f3f3;
   text-align: center;
 }
 
@@ -26,9 +31,10 @@
 }
 
 .car-card {
-  background-color: #f9f9f9;
+  background-color: #ffffff;
   padding: 20px;
-  width: 220px;
+
+  width: 250px;
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   margin-left: 50px;
@@ -36,7 +42,7 @@
 
 .car-card h3 {
   margin-bottom: 10px;
-  color: #27ae60;
+  color: #000000;
 }
 .car-card img {
   width: 100%;
@@ -47,8 +53,44 @@
 }
   </style>
   <body>
+    <nav class="navbar bg-warning" data-bs-theme="light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">WheelDrivePH</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Dropdown
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+          </li>
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
     <section class="cars">
-        <h2>Cars Offered</h2>
+        <h2 style="color: #000000; margin-bottom: 50px;">Cars Offered</h2>
         <div class="car-list">
           <div class="car-card">
             <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEixDVspt0K6ADR1df5jL9kKO4SGH0bOyBiOgeNsSUa-2HQKu6kOKeAvaI5D2Ex7W8iuNXaf9lFhD3Iqg6HVzSW39nDNzu15OuO8eABcJwVjpLyNEW8Tj1nyaRVjNsYZ3POnQWX4m85pQ9XNy5M_fZ4hLCFFy4lZPGNT-6wrCufjppej9CZtmGl93bBxCgHy/s1024/2021_toyota_vios_gr-s_00.jpg" alt="Economy Car" />
