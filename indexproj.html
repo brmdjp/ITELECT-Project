@@ -17,128 +17,78 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background: #c97526;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}   
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+            background: url(bg.avif);
+            background-size: cover;
+            background-position: center;
+
+          
+        }
+        .login-container {
+            background: white;
+            padding: 50px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 1);
+            border-radius: 10px;
+            width: 500px;
+            height: 350px;
+            text-align: center;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            width: 80%;
+            padding: 10px;
+            margin-top: 20px;
+            background-color: #dd9e2b;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
 
 
-.login-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-}
 
 
-.login-box {
-    background: #ffffff;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    width: 450px;
-    text-align: center;
-}
-
-h2 {
-    margin-bottom: 20px;
-    font-size: 24px;
-    color: #333;
-}
-
-.textbox {
-    margin-bottom: 20px;
-    display: flex;
-    flex-direction: column;
-}
-
-.textbox input {
-    padding: 10px;
-    margin: 8px 0;
-    border-radius: 5px;
-    border: 1px solid #ddd;
-    font-size: 16px;
-}
-
-.textbox input:focus {
-    outline: none;
-    border-color: #5c6bc0;
-}
-
-.remember-me {
-    text-align: left;
-    margin-bottom: 20px;
-}
-
-.remember-me input {
-    margin-right: 5px;
-}
-
-.btn {
-    width: 100%;
-    padding: 12px;
-    background-color: #5c6bc0;
-    color: rgb(17, 15, 138);
-    border: none;
-    border-radius: 5px;
-    font-size: 18px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.btn:hover {
-    background-color: #3f51b5;
-}
-
-.signup-link {
-    margin-top: 10px;
-}
-
-.signup-link a {
-    color: #5c6bc0;
-    text-decoration: none;
-}
-
-.signup-link a:hover {
-    text-decoration: underline;
-}
-
-.submit-container{
-    width: 100px;
-    height: 100px;
-    align-items: center;
-    display: flex;
-}
-.logo-img{
-    
-}
 
 </style>
 <body>
-    <div class="login-container">
-        <div class="login-box">
-            <nav class="navbar bg-body-tertiary">
-                <div class="logo-img">
+     <nav class="navbar bg-body-tertiary"></nav>
+        <br><br>
+         <div class="login-container">
+            <div class="logo-img">
                 <a class="navbar-brand" href="#">
-                    <img src="logo.png" alt="" width="200" height="60">
-                </a>
+                <img src="logo1.png" alt="" width="200" height="60"></a>
             </div>
-            </nav>
-            <br><br>
-            <h2>Login</h2>
-            <form action="#" method="POST">
-                <div class="textbox">
-                    <input type="text" placeholder="Username" name="username" required>
-                </div>
-                <div class="textbox">
-                    <input type="password" placeholder="Password" name="password" required>
-                </div>
-                <div class="remember-me">
-                    <input type="checkbox" name="remember" id="remember">
-                    <label for="remember">Remember Me</div>
-                        <button class="btn btn-primary" onclick="SubmitEvent()">Log In</button>
-                      
+            <br>
+            <h2>Log In</h2>
+            <form id="loginForm">
+                <input type="email" id="email" placeholder="Enter your email" required>
+                <input type="password" id="password" placeholder="Enter your password" required>
+                <button type="submit">Login</button>
+            </form>
+            </div>
+            
+            <script>
+                document.getElementById("loginForm").addEventListener("submit", function(event) {
+                    event.preventDefault(); 
+                    
+                    var email = document.getElementById("email").value;
+                    var password = document.getElementById("password").value;
+            
+                    if (email === "user@gmail.com" && password === "admin123") {
+                        window.location.href = "#"
+                    } else {
+                        alert("Invalid email or password. Please try again.");
+                    }
+                });
+            </script>
